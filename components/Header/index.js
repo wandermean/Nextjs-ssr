@@ -1,14 +1,15 @@
 import React, { PureComponent, Fragment } from "react";
 import Link from "next/link";
-import { styles } from "./style.less";
+import styles from "./style.less";
 
 class Header extends PureComponent {
   render() {
     return (
       <div className={styles.container}>
-        <Link to="/" className={styles.item}>
-          首页
+        <Link prefetch href="/">
+          <a className={styles.item}>首页</a>
         </Link>
+        <button onClick={()=>alert(1)}>aa</button>
         {/* {login ? (
           <Fragment>
             <Link to="/translation" className={styles.item}>
